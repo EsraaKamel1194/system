@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roma Market</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesadd.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Roma Market</h1>
+    </header>
+
+    <div class="main-content">
+      <div class="form-section">
+        <h2>Add New Product</h2>
+        <form action="{{ url_for('add_product') }}" method="POST">
+          <label for="product-name">Product Name:</label>
+          <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+
+          <label for="category">Category:</label>
+          <input type="text" id="category" name="category" placeholder="Enter category" required>
+
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" placeholder="Enter price" step="0.01" required>
+
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
+
+          <button type="submit" class="btn">Add Product</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2024 Roma Market. All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

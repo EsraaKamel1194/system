@@ -1,0 +1,147 @@
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ترويسة */
+.header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ff333a; /* اللون الأحمر */
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+  display: flex; /* جعل العناصر جنبًا إلى جنب */
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.form-section {
+  flex: 2; /* يشغل جزءًا من العرض */
+  padding: 30px;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-right: 20px;
+  min-width: 400px;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  color: #ff3333; /* اللون الأحمر */
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff333a;
+  outline: none;
+}
+
+.btn {
+  background-color: #cd1b2d; /* اللون الأحمر */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #f91c2e;
+  transform: scale(1.05);
+}
+
+/* قسم الصورة */
+.image-section {
+  flex: 1; /* يشغل جزءًا من العرض */
+  text-align: center;
+  margin-left: 30px;
+}
+
+.image-section img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 60px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* الفوتر */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+}
+
+/* التوافق مع الأجهزة المحمولة */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* عرض الصورة والفورم فوق بعض */
+  }
+
+  .image-section {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .form-section {
+    margin-right: 0;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .form-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
